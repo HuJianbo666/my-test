@@ -37,4 +37,21 @@
         </developer>
     </developers>
 
+    <!-- 不加会deploy失败 -->
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>TestWebApp_Repository</id>
+            <name>TestWebApp Applications Repository Internal</name>
+            <url>file://D:/Devp/maven/repostory</url>
+            <layout>default</layout>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>false</uniqueVersion>
+            <id>TestWebApp_Repository</id>
+            <name>TestWebApp Applications Repository Internal</name>
+            <url>file://D:/Devp/maven/repostory</url>
+            <layout>default</layout>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
