@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.test2</groupId>
+    <artifactId>test2</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/unclehjb/test2.git</url>
+        <connection>git@github.com/unclehjb/test2.git</connection>
+        <developerConnection>https://www.ihboo.com</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>unclehjb</name>
+            <email>hjb_job@163.com</email>
+            <url>https://www.ihboo.com</url>
+        </developer>
+    </developers>
+
+</project>
