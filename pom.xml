@@ -4,54 +4,31 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.test2</groupId>
+    <groupId>com.github.unclehh.test2</groupId>
     <artifactId>test2</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
+    <dependencies>
 
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
-    </parent>
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>21.0</version>
+        </dependency>
 
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+    </dependencies>
 
-    <scm>
-        <url>https://github.com/unclehjb/test2.git</url>
-        <connection>git@github.com/unclehjb/test2.git</connection>
-        <developerConnection>https://www.ihboo.com</developerConnection>
-    </scm>
-
-    <developers>
-        <developer>
-            <name>unclehjb</name>
-            <email>hjb_job@163.com</email>
-            <url>https://www.ihboo.com</url>
-        </developer>
-    </developers>
-
-    <!-- 不加会deploy失败 -->
-    <distributionManagement>
-        <repository>
-            <uniqueVersion>false</uniqueVersion>
-            <id>TestWebApp_Repository</id>
-            <name>TestWebApp Applications Repository Internal</name>
-            <url>file://D:/Devp/maven/repostory</url>
-            <layout>default</layout>
-        </repository>
-        <snapshotRepository>
-            <uniqueVersion>false</uniqueVersion>
-            <id>TestWebApp_Repository</id>
-            <name>TestWebApp Applications Repository Internal</name>
-            <url>file://D:/Devp/maven/repostory</url>
-            <layout>default</layout>
-        </snapshotRepository>
-    </distributionManagement>
 </project>
