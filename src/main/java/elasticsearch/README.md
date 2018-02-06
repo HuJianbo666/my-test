@@ -20,3 +20,9 @@ Your error is because you are using an instance of Elasticsearch 5.x and you nee
 ```
 
 就不用springboot starter这种方式了。
+
+## java API
+
+https://www.elastic.co/guide/en/elasticsearch/client/java-api/current/java-docs-index.html
+
+在这，也踩了不少坑
