@@ -28,6 +28,21 @@
             <artifactId>guava</artifactId>
             <version>21.0</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.github.benas/jpopulator -->
+        <dependency>
+            <groupId>io.github.benas</groupId>
+            <artifactId>jpopulator</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+        </dependency>
+
     </dependencies>
 
 </project>
