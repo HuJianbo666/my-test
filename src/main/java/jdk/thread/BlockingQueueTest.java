@@ -29,7 +29,7 @@ public class BlockingQueueTest {
             try {
                 queue.put(1);
                 System.out.println("put" + 1);
-                //queue.put(2);
+                //jdk.queue.put(2);
                 //System.out.println("put" + 2);
                 queue.put(3);
                 System.out.println("put" + 3);
