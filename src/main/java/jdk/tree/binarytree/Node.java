@@ -1,7 +1,7 @@
 package jdk.tree.binarytree;
 
 /**
- * 二叉树
+ * 最普通的二叉树
  *
  * @author Hu Jianbo
  * @date: 2018/5/18
