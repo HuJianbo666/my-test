@@ -5,17 +5,17 @@ import com.google.common.eventbus.Subscribe;
 
 /**
  * 发布订阅
- * Created by hujianbo on 2018/1/25.
+ * Created by hujianbo on 2018/io1/25.
  */
 public class EventBusTest {
 
     public static void main(String[] args) {
         EventBus eventBus = new EventBus("jack");
         eventBus.register(new EventListener1());
-        eventBus.register(new EventListener2());
+        //eventBus.register(new EventListener2());
         eventBus.post(new OrderEvent("hello"));
-        eventBus.post(new OrderEvent("guava"));
-        eventBus.post("!");
+        //eventBus.post(new OrderEvent("guava"));
+        //eventBus.post("!");
 
     }
 
@@ -39,14 +39,14 @@ public class EventBusTest {
          *
          * @param message
          */
-        @Subscribe
-        public void listen(String message) {
-            System.out.println("receive message: " + message);
-        }
+        //@Subscribe
+        //public void listen(String message) {
+        //    System.out.println("listener1 receive message: " + message);
+        //}
 
         @Subscribe
         public void listen(OrderEvent event) {
-            System.out.println("receive message: " + event.getMessage());
+            System.out.println("listener1 receive message: " + event.getMessage());
         }
     }
 
@@ -59,12 +59,12 @@ public class EventBusTest {
          */
         @Subscribe
         public void listen(String message) {
-            System.out.println("receive message: " + message);
+            System.out.println("listener2 receive message: " + message);
         }
 
         @Subscribe
         public void listen(OrderEvent event) {
-            System.out.println("receive message: " + event.getMessage());
+            System.out.println("listener2 receive message: " + event.getMessage());
         }
     }
 }
