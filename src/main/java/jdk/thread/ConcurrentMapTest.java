@@ -9,14 +9,14 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * concurrentHashmap和Hashmap比较
  * <p>
- * Created by hujianbo on 2018/1/26.
+ * Created by hujianbo on 2018/io1/26.
  */
 public class ConcurrentMapTest {
     public static void main(final String[] arguments) {
 
         //Map<String, String> map = new ConcurrentHashMap<String, String>();
         //
-        //map.put("1", "One");
+        //map.put("io1", "One");
         //map.put("2", "Two");
         //map.put("3", "Three");
         //map.put("5", "Five");
@@ -39,7 +39,7 @@ public class ConcurrentMapTest {
 
         Map<String, String> map = new HashMap<String, String>();
 
-        map.put("1", "One");
+        map.put("io1", "One");
         map.put("2", "Two");
         map.put("3", "Three");
         map.put("5", "Five");

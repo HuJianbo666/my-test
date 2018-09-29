@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * Serializable 序列反序列demo
  * <p>
- * Created by hujianbo on 2018/3/1.
+ * Created by hujianbo on 2018/3/io1.
  */
 public class SerializableTest {
 
@@ -64,7 +64,7 @@ public class SerializableTest {
 
         SerializableTest.readSerializableObject();
         //结果
-        //string:Man{id=1, name='name1', phone='null'}
+        //string:Man{id=io1, name='name1', phone='null'}
         //属性加上transient，不序列
     }
 }

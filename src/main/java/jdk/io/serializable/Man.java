@@ -3,7 +3,7 @@ package jdk.io.serializable;
 import java.io.Serializable;
 
 /**
- * Created by hujianbo on 2018/3/1.
+ * Created by hujianbo on 2018/3/io1.
  */
 public class Man implements Serializable {
 

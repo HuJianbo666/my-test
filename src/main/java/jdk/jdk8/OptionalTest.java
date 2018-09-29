@@ -3,7 +3,7 @@ package jdk.jdk8;
 import java.util.Optional;
 
 /**
- * 1. of() 创建Optional对象，传null报空指针
+ * io1. of() 创建Optional对象，传null报空指针
  * 2. ofNullable() 与of()区别就是可以传null，返回empty Optional对象
  * 3. isPresent() 检查Optional实例是否包含值
  * 4. get() 获取值，没有值抛出NoSuchElementException
@@ -14,7 +14,7 @@ import java.util.Optional;
  * 9. flatMap与map类似，区别在于flatmap必须返回值是Optioanal实例，map会自动封装
  * 10. filter()过滤条件
  * <p>
- * Created by hujianbo on 2018/1/30.
+ * Created by hujianbo on 2018/io1/30.
  */
 public class OptionalTest {
 

@@ -102,6 +102,10 @@ public class SpelTest {
         Boolean value = parser.parseExpression("birthdate.Year > 2").getValue(context, Boolean.class);
 
         System.out.println(tesla.getName()); // "Mike Tesla"
+
+        Boolean v = parser.parseExpression("!(Name == 'Mike Tes2la' && birthdate.Year > 2)").getValue(context, Boolean.class);
+        System.out.println(v);
+
     }
 
     @Test

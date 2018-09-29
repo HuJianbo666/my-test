@@ -2,7 +2,7 @@ package jdk.thread;
 
 /**
  * 最基本的用法
- * Created by hujianbo on 2018/1/26.
+ * Created by hujianbo on 2018/io1/26.
  */
 public class ThreadTest1 {
     public static void main(String[] args) {

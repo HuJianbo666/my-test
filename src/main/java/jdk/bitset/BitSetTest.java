@@ -69,7 +69,7 @@ public class BitSetTest {
         System.out.println("bitSet:");
         System.out.println(bitSet);
         for (int i = 0; i < 20; i++) {
-            // 在存的index设置为true，默认是false，例如set(1)，则index为1的设置为true
+            // 在存的index设置为true，默认是false，例如set(io1)，则index为1的设置为true
             System.out.print(bitSet.get(i) + ",");
         }
         System.out.println();

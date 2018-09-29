@@ -3,7 +3,7 @@ package jdk.thread;
 /**
  * ThreadLocal类用于创建只能由同一个线程读取和写入的线程局部变量
  * <p>
- * Created by hujianbo on 2018/1/26.
+ * Created by hujianbo on 2018/io1/26.
  */
 public class ThreadLocalTest {
     public static void main(String[] args) {

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * 模拟String
- * Created by hujianbo on 2018/3/1.
+ * Created by hujianbo on 2018/3/io1.
  */
 public class MyString {
 
@@ -83,12 +83,4 @@ public class MyString {
         return false;
     }
 
-    public static void main(String[] args) {
-        MyString s1 = new MyString("s1");
-        MyString s2 = new MyString("s11");
-        boolean equals = s1.equals(s2);
-        System.out.println(equals);
-
-        System.out.println(s2.startwith("1", 1));
-    }
 }

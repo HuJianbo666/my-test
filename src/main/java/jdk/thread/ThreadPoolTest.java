@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 
 /**
  * 线程池
- * Created by hujianbo on 2018/1/26.
+ * Created by hujianbo on 2018/io1/26.
  */
 public class ThreadPoolTest {
     public static void main(String[] args) throws ExecutionException, InterruptedException {

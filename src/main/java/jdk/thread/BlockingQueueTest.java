@@ -6,7 +6,7 @@ import java.util.concurrent.BlockingQueue;
 /**
  * BlockingQueue一个demo
  * <p>
- * Created by hujianbo on 2018/1/26.
+ * Created by hujianbo on 2018/io1/26.
  */
 public class BlockingQueueTest {
     public static void main(String[] args) {

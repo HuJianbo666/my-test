@@ -23,7 +23,7 @@ public class OperatorsTest {
     @Test
     public void test1() {
         // evaluates to a Java list containing the four numbers
-        List numbers = (List) parser.parseExpression("{1,2,3,4}").getValue();
+        List numbers = (List) parser.parseExpression("{io1,2,3,4}").getValue();
 
         List listOfLists = (List) parser.parseExpression("{{'a','b'},{'x','y'}}").getValue();
     }
@@ -31,7 +31,7 @@ public class OperatorsTest {
     @Test
     public void test2() {
         // evaluates to true
-        Integer trueValue = parser.parseExpression("2 + 3 * (9 - 7) - 1").getValue(Integer.class);
+        Integer trueValue = parser.parseExpression("2 + 3 * (9 - 7) - io1").getValue(Integer.class);
 
         // evaluates to false
         boolean falseValue = parser.parseExpression("2 < -5.0").getValue(Boolean.class);

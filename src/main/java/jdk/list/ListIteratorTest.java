@@ -7,7 +7,7 @@ import java.util.ListIterator;
 /**
  * listIterator可以对list迭代中进行修改添加删除操作
  * <p>
- * Created by hujianbo on 2018/1/26.
+ * Created by hujianbo on 2018/io1/26.
  */
 public class ListIteratorTest {
     public static void main(String[] args) {

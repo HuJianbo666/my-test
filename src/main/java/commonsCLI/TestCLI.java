@@ -19,7 +19,7 @@ public class TestCLI {
     private final static String versionStr = "v";
     private final static String filePathStr = "f";
     private final static String fileBasePath = System.getProperty("user.dir") + "\\src\\main\\java\\commonsCLI\\";
-    private final static String version = "1.0.0";
+    private final static String version = "io1.0.0";
 
     public static void main(String[] args) {
         String[] argss = {"-f", "config.properties"};
