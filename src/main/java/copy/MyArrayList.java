@@ -61,7 +61,7 @@ public class MyArrayList<E> extends AbstractList<E> implements List<E>, RandomAc
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override

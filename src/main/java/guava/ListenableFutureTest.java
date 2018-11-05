@@ -15,7 +15,7 @@ public class ListenableFutureTest {
         ListeningExecutorService service = MoreExecutors.listeningDecorator(Executors.newCachedThreadPool());
         ListenableFuture<String> future = service.submit(() -> {
             System.out.println("call exe..");
-            return "task success!";
+            return doSubmit();
         });
         future.addListener(() -> {
             try {
@@ -35,9 +35,22 @@ public class ListenableFutureTest {
 
             @Override
             public void onFailure(Throwable t) {
+                try {
+                    String s = future.get();
+                    System.out.println("-----" + s);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
                 System.out.println("failure:" + t.getMessage());
             }
         }, service);
 
+    }
+
+    private static String doSubmit() {
+        int i = 1/0;
+        return "task success!";
     }
 }
