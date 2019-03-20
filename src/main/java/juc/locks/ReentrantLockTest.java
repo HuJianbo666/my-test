@@ -1,30 +1,68 @@
 package juc.locks;
 
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.RejectedExecutionHandler;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ *
+ * @author HuJianbo
+ */
 public class ReentrantLockTest {
     public static void main(String[] args) throws InterruptedException {
-        final BoundedBuffer boundedBuffer = new BoundedBuffer();
+        BoundedBuffer boundedBuffer = new BoundedBuffer();
+        ThreadFactory threadFactory = new ThreadFactory() {
+            final AtomicInteger threadNumber = new AtomicInteger(1);
+            final String namePrefix = "self-defined-";
 
-        Thread a = new Thread(() -> {
-            for (int i = 0; i < 10; i++) {
-                System.out.println("putting...:" + i);
-                boundedBuffer.put(i);
+            @Override
+            public Thread newThread(Runnable r) {
+                Thread t = new Thread(r, namePrefix + threadNumber.getAndIncrement());
+                if (t.isDaemon()) {
+                    t.setDaemon(true);
+                }
+                if (t.getPriority() != Thread.NORM_PRIORITY) {
+                    t.setPriority(Thread.NORM_PRIORITY);
+                }
+                return t;
             }
-        }, "A");
+        };
+        RejectedExecutionHandler rejectedExecutionHandler = new ThreadPoolExecutor.AbortPolicy();
 
-        Thread b = new Thread(() -> {
-            for (int i = 0; i < 10; i++) {
-                System.out.println("taking...:" + boundedBuffer.take());
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2,
+                2,
+                10,
+                TimeUnit.SECONDS,
+                new LinkedBlockingQueue<>(),
+                threadFactory,
+                rejectedExecutionHandler);
+
+        threadPoolExecutor.execute(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 10; i++) {
+                    boundedBuffer.put(i);
+                    System.out.println(Thread.currentThread().getName() + "-put:" + i);
+                }
             }
-        }, "B");
-        a.start();
-        Thread.sleep(1000);
-        b.start();
+        });
+        Thread.sleep(2000);
+        threadPoolExecutor.execute(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < 10; i++) {
+                    System.out.println(Thread.currentThread().getName() + "-take:" + boundedBuffer.take());
+                    ;
+                }
+            }
+        });
     }
-
 }
 
 class BoundedBuffer {
