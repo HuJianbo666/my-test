@@ -16,8 +16,8 @@ public class ThreadPoolFactory {
         if (pool == null) {
             synchronized (ThreadPoolExecutor.class) {
                 if (pool == null) {
-                    pool = new ThreadPoolExecutor(2,
-                            3,
+                    pool = new ThreadPoolExecutor(5,
+                            6,
                             10L,
                             TimeUnit.SECONDS,
                             new LinkedBlockingQueue<>(),

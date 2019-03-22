@@ -52,6 +52,8 @@ public class ReadWriteLockTest {
                 write(Thread.currentThread());
             }
         });
+
+        pool.shutdown();
     }
 
     private static void write(Thread thread) {

@@ -18,6 +18,7 @@ public class AtomicIntegerTest {
         ThreadPoolExecutor pool = ThreadPoolFactory.getDefaultThreadPool();
         pool.execute(new Producter());
         pool.execute(new Consumer());
+        pool.shutdown();
     }
 
     private static class Producter implements Runnable {

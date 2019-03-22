@@ -69,6 +69,8 @@ public class CopyOnWriteArrayListTest {
                 }
             });
         }
+
+        pool.shutdown();
     }
 
     private static void read(List list) {
